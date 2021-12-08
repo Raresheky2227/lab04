@@ -6,9 +6,17 @@ import os           # environment variables
 import inspect      # call stack inspection
 import random       # dumb random number generator
 import glob
+import argparse
+
 
 from discord.ext import commands    # Bot class and utils
- 
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-t", "--TOKEN", help="token", action="store_true")
+parser.add_argument("x", type=string, help="token")
+args = parser.parse_args()
+BOT_TOKEN = args.x
+
 ################################################################################
 ############################### HELPER FUNCTIONS ###############################
 ################################################################################
